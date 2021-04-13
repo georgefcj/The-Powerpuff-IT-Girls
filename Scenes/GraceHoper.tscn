@@ -1,0 +1,60 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://assets/Players/Mitchell/Mitchell1.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
+[ext_resource path="res://assets/Players/Mitchell/Mitchell4.png" type="Texture" id=3]
+[ext_resource path="res://assets/Players/Mitchell/Mitchell2.png" type="Texture" id=4]
+[ext_resource path="res://assets/Players/Mitchell/Mitchell3.png" type="Texture" id=5]
+[ext_resource path="res://assets/Players/Mitchell/Mitchell6.png" type="Texture" id=6]
+[ext_resource path="res://assets/Players/Mitchell/Mitchell5.png" type="Texture" id=7]
+[ext_resource path="res://assets/Players/Mitchell/Mitchell8.png" type="Texture" id=8]
+[ext_resource path="res://assets/Players/Mitchell/Mitchell9.png" type="Texture" id=9]
+[ext_resource path="res://assets/Players/Mitchell/Mitchell7.png" type="Texture" id=10]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 50.0
+height = 40.0
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 6 ), ExtResource( 10 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "walking",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "jumping",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 50.0
+height = 70.0
+
+[node name="GraceHoper" type="KinematicBody2D"]
+position = Vector2( 53.1808, 8.99628 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -145.231, 87.3099 )
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -144.163, 94.7736 )
+frames = SubResource( 2 )
+animation = "walking"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -146.867, 91.5689 )
+shape = SubResource( 3 )
