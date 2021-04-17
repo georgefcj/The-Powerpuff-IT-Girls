@@ -30,7 +30,6 @@ func _on_OutTheMap_body_entered(body):
 
 func _on_Flag_body_entered(body):
 	var can_proceed = BugStats.get_bugs_founded() == BugStats.get_total_bugs()
-	print(can_proceed)
 	if body.name == "Player" and can_proceed:
 		get_tree().change_scene("res://Scenes/Level3.tscn")
 	elif body.name == "Player" and not can_proceed:
