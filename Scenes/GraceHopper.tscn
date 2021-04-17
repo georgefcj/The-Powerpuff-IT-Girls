@@ -13,7 +13,7 @@
 [ext_resource path="res://Audio/Jump.wav" type="AudioStream" id=11]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 50.0
+radius = 47.5111
 height = 40.0
 
 [sub_resource type="SpriteFrames" id=2]
@@ -36,14 +36,11 @@ animations = [ {
 
 [sub_resource type="CapsuleShape2D" id=3]
 radius = 50.0
-height = 70.0
+height = 54.0486
 
 [node name="GraceHoper" type="KinematicBody2D"]
 position = Vector2( 53.1808, 8.99628 )
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -145.231, 87.3099 )
@@ -57,7 +54,7 @@ animation = "walking"
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -146.867, 91.5689 )
+position = Vector2( -146.867, 87.3263 )
 shape = SubResource( 3 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer2D" parent="."]

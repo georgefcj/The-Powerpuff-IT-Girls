@@ -7,4 +7,10 @@ func found_bug():
 	self.bugs_founded += 1
 
 func bugs_count():
-	return str(self.bugs_founded) + "/"+ str(self.total_bugs)
+	return str(self.get_bugs_founded()) + "/"+ str(self.get_total_bugs())
+	
+func get_total_bugs():
+	return self.total_bugs
+	
+func get_bugs_founded():
+	return self.bugs_founded

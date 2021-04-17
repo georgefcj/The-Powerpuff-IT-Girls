@@ -4,7 +4,7 @@ func _ready() -> void:
 	PlayerStats.set_initial_position($Player.position)
 	self.update_bugs_count()
 	
-func _process(delta:float) -> void:
+func _physics_process(delta:float) -> void:
 	self.update_bugs_count()
 	self.update_text()
 
@@ -29,6 +29,10 @@ func _on_OutTheMap_body_entered(body):
 		$Player.position = PlayerStats.get_initial_position()
 
 func _on_Flag_body_entered(body):
-	if body.name == "Player":
+	var can_proceed = BugStats.get_bugs_founded() == BugStats.get_total_bugs()
+	print(can_proceed)
+	if body.name == "Player" and can_proceed:
 		get_tree().change_scene("res://Scenes/Level3.tscn")
+	elif body.name == "Player" and not can_proceed:
+		self.messages[PlayerStats.get_score()] = "Colete o(s) bug(s) restante(s)"
 
