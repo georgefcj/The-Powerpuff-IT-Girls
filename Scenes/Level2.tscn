@@ -25,10 +25,10 @@ points = PoolVector2Array( 0, 0, 36, 0, 36, 33, 0, 33 )
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 34, 0, 34, 33, 0, 33 )
 
-[sub_resource type="ConvexPolygonShape2D" id=5]
+[sub_resource type="ConvexPolygonShape2D" id=3]
 points = PoolVector2Array( 33, 30, 0, 30, 0, 0.833313, 33, 0.833313 )
 
-[sub_resource type="TileSet" id=3]
+[sub_resource type="TileSet" id=4]
 0/name = "Tile1.png 0"
 0/texture = ExtResource( 4 )
 0/tex_offset = Vector2( 0, 0 )
@@ -116,14 +116,14 @@ points = PoolVector2Array( 33, 30, 0, 30, 0, 0.833313, 33, 0.833313 )
 6/navigation_offset = Vector2( 0, 0 )
 6/shape_offset = Vector2( 0, 0 )
 6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-6/shape = SubResource( 5 )
+6/shape = SubResource( 3 )
 6/shape_one_way = false
 6/shape_one_way_margin = 1.0
 6/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 5 ),
+"shape": SubResource( 3 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 6/z_index = 0
@@ -191,21 +191,21 @@ points = PoolVector2Array( 33, 30, 0, 30, 0, 0.833313, 33, 0.833313 )
 } ]
 10/z_index = 0
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=5]
 size = 35
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 19 )
 
-[sub_resource type="DynamicFont" id=9]
+[sub_resource type="DynamicFont" id=6]
 size = 35
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 19 )
 
-[sub_resource type="SegmentShape2D" id=6]
+[sub_resource type="SegmentShape2D" id=7]
 a = Vector2( -870.174, 1011.65 )
 b = Vector2( 5470.38, 1015.47 )
 
-[sub_resource type="SpriteFrames" id=7]
+[sub_resource type="SpriteFrames" id=8]
 animations = [ {
 "frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 16 ) ],
 "loop": true,
@@ -213,7 +213,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=8]
+[sub_resource type="CapsuleShape2D" id=9]
 radius = 56.2699
 
 [node name="Level2" type="Node2D"]
@@ -227,7 +227,7 @@ tile_data = PoolIntArray( -851986, 1, 0, -851985, 1, 0, -851984, 1, 0, -851982, 
 
 [node name="Ground" type="TileMap" parent="."]
 position = Vector2( -406.826, 37.755 )
-tile_set = SubResource( 3 )
+tile_set = SubResource( 4 )
 cell_size = Vector2( 16, 16 )
 cell_quadrant_size = 24
 format = 1
@@ -246,7 +246,7 @@ margin_left = -348.132
 margin_top = -200.542
 margin_right = -247.132
 margin_bottom = -145.542
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 uppercase = true
 __meta__ = {
@@ -258,7 +258,7 @@ margin_left = -254.954
 margin_top = -194.954
 margin_right = 497.046
 margin_bottom = 7.04593
-custom_fonts/font = SubResource( 9 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 align = 1
 valign = 1
@@ -287,7 +287,7 @@ position = Vector2( 1881.67, -787.348 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="OutTheMap"]
 position = Vector2( -2.37842, -2.37842 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 15 )
@@ -304,12 +304,12 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Flag"]
 position = Vector2( -58.7993, -8.46353 )
 scale = Vector2( 0.693754, 0.742475 )
-frames = SubResource( 7 )
+frames = SubResource( 8 )
 animation = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Flag"]
 position = Vector2( -72.1628, -6.23628 )
-shape = SubResource( 8 )
+shape = SubResource( 9 )
 
 [node name="Timer" type="Timer" parent="."]
 [connection signal="body_entered" from="OutTheMap" to="." method="_on_OutTheMap_body_entered"]
