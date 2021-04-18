@@ -35,11 +35,11 @@ func handle_selection(_current_selection):
 		get_parent().add_child(first_scene.instance())
 		queue_free()
 #	# CENA 2
-#	if _current_selection == 0:
+#	if _current_selection == 1:
 #		get_parent().add_child(second_scene.instance())
 #		queue_free()
 #	# CENA 3
-#	if _current_selection == 0:
+#	if _current_selection == 2:
 #		get_parent().add_child(third_scene.instance())
 #		queue_free()
 
