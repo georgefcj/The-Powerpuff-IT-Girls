@@ -31,46 +31,36 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 
 [sub_resource type="StreamTexture" id=2]
 flags = 4
-load_path = "res://.import/grass.png-f64945f361c5b6fa87b6d5ef23248243.stex"
 
 [sub_resource type="ConvexPolygonShape2D" id=3]
 points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 
 [sub_resource type="StreamTexture" id=4]
 flags = 4
-load_path = "res://.import/grassCenter.png-ef46a41f2a1c80df582c8820dcc1dfc0.stex"
 
 [sub_resource type="StreamTexture" id=5]
 flags = 4
-load_path = "res://.import/grassHalf_left.png-a4df209328fff1ecd07ad80694ef5729.stex"
 
 [sub_resource type="StreamTexture" id=6]
 flags = 4
-load_path = "res://.import/grassHalf_mid.png-1863cbf1d595cf1fc3ce2a4759027f05.stex"
 
 [sub_resource type="StreamTexture" id=7]
 flags = 4
-load_path = "res://.import/grassHalf_right.png-63910927174c14705f9d7a0c19ba6576.stex"
 
 [sub_resource type="StreamTexture" id=8]
 flags = 4
-load_path = "res://.import/grassHill_left.png-adfbf05f8833ad1f13104b053b34bb2a.stex"
 
 [sub_resource type="StreamTexture" id=9]
 flags = 4
-load_path = "res://.import/grassHill_right.png-58d5472dd38d8ef21ae217b4b0aa2df2.stex"
 
 [sub_resource type="StreamTexture" id=10]
 flags = 4
-load_path = "res://.import/grassLeft.png-ae9bc521cdd431e02b0fa6bb4a5f924c.stex"
 
 [sub_resource type="StreamTexture" id=11]
 flags = 4
-load_path = "res://.import/grassMid.png-3b530ea1ec74dc49fabc8661434a6f87.stex"
 
 [sub_resource type="StreamTexture" id=12]
 flags = 4
-load_path = "res://.import/grassRight.png-db92fc7d9e0a617ab4f546fec8d42116.stex"
 
 [sub_resource type="ConvexPolygonShape2D" id=13]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -83,7 +73,6 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 
 [sub_resource type="StreamTexture" id=16]
 flags = 4
-load_path = "res://.import/grassCenter_round.png-89bb955184d2b62734cf54962315a8f2.stex"
 
 [sub_resource type="ConvexPolygonShape2D" id=17]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -111,40 +100,33 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 
 [sub_resource type="StreamTexture" id=25]
 flags = 4
-load_path = "res://.import/grassCliffAlt_left.png-92a87ac9318639314d6606e438736daa.stex"
 
 [sub_resource type="ConvexPolygonShape2D" id=26]
 points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 
 [sub_resource type="StreamTexture" id=27]
 flags = 4
-load_path = "res://.import/grassCliffAlt_right.png-a27fc978fbebf82dd3f2a708ddf6ceb0.stex"
 
 [sub_resource type="ConvexPolygonShape2D" id=28]
 points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 
 [sub_resource type="StreamTexture" id=29]
 flags = 4
-load_path = "res://.import/grassCliff_left.png-00c54464d19d3df82e04af5d9dc3b272.stex"
 
 [sub_resource type="ConvexPolygonShape2D" id=30]
 points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 
 [sub_resource type="StreamTexture" id=31]
 flags = 4
-load_path = "res://.import/grassCliff_right.png-4288919014de566796f009801d60fb0e.stex"
 
 [sub_resource type="StreamTexture" id=32]
 flags = 4
-load_path = "res://.import/grassCorner_left.png-3b75c3d03d376e2dd2b3319fb2919751.stex"
 
 [sub_resource type="StreamTexture" id=33]
 flags = 4
-load_path = "res://.import/grassCorner_right.png-fe163f747c4fa40e4778b418c948f528.stex"
 
 [sub_resource type="StreamTexture" id=34]
 flags = 4
-load_path = "res://.import/grassHalf.png-e8c92c461ec2b6b90c266fa5749b46ba.stex"
 
 [sub_resource type="TileSet" id=35]
 resource_local_to_scene = true
@@ -653,7 +635,6 @@ points = PoolVector2Array( 96, 96, 32, 96, 32, 32, 96, 32 )
 
 [sub_resource type="StreamTexture" id=40]
 flags = 4
-load_path = "res://.import/coinGold.png-d9986910c45eb606e2d85ee09a34f7b5.stex"
 
 [sub_resource type="ConvexPolygonShape2D" id=41]
 points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
@@ -663,7 +644,6 @@ points = PoolVector2Array( 96, 96, 32, 96, 32, 32, 96, 32 )
 
 [sub_resource type="StreamTexture" id=43]
 flags = 4
-load_path = "res://.import/gemBlue.png-c5c660cb140e3a7d5c9dad05b52276c0.stex"
 
 [sub_resource type="TileSet" id=44]
 1/name = "cactus.png 1"
