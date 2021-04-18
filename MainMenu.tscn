@@ -1,0 +1,125 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Option_Font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Tittle.tres" type="DynamicFont" id=2]
+[ext_resource path="res://MainMenu.gd" type="Script" id=3]
+
+[node name="MarginContainer" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 640.0
+margin_bottom = 360.0
+color = Color( 0.14902, 0.14902, 0.14902, 1 )
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_right = 640.0
+margin_bottom = 360.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 180.0
+margin_top = 138.0
+margin_right = 459.0
+margin_bottom = 222.0
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
+margin_right = 279.0
+margin_bottom = 24.0
+
+[node name="Tittle" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer"]
+margin_right = 279.0
+margin_bottom = 24.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Power Puff IT Girls"
+
+[node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 28.0
+margin_right = 279.0
+margin_bottom = 84.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2"]
+margin_left = 65.0
+margin_right = 214.0
+margin_bottom = 56.0
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer"]
+margin_right = 149.0
+margin_bottom = 16.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer"]
+margin_right = 149.0
+margin_bottom = 16.0
+
+[node name="Selector" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer/HBoxContainer"]
+margin_right = 8.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 8, 0 )
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = ">"
+
+[node name="Option" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer/HBoxContainer"]
+margin_left = 12.0
+margin_right = 149.0
+margin_bottom = 16.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Mitchell Baker"
+
+[node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer"]
+margin_top = 20.0
+margin_right = 149.0
+margin_bottom = 36.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer2"]
+margin_right = 149.0
+margin_bottom = 16.0
+
+[node name="Selector" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer2/HBoxContainer"]
+margin_right = 8.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 8, 0 )
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = ">"
+
+[node name="Option" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer2/HBoxContainer"]
+margin_left = 12.0
+margin_right = 149.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 137, 0 )
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Mary Lou"
+
+[node name="CenterContainer3" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer"]
+margin_top = 40.0
+margin_right = 149.0
+margin_bottom = 56.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer3"]
+margin_right = 149.0
+margin_bottom = 16.0
+
+[node name="Selector" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer3/HBoxContainer"]
+margin_right = 8.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 8, 0 )
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = ">"
+
+[node name="Option" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer3/HBoxContainer"]
+margin_left = 12.0
+margin_right = 149.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 137, 0 )
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Grace Hopper"
