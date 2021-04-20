@@ -4,7 +4,6 @@
 
 [sub_resource type="StreamTexture" id=1]
 flags = 4
-load_path = "res://.import/blue_desert.png-7c518eb4eab07c378fe6a4358fbf8434.stex"
 
 [resource]
 0/name = "blue_desert"
