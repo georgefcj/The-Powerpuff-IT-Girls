@@ -7,14 +7,14 @@ func _init():
 	timer = Timer.new()
 	add_child(timer)
 	timer.autostart = true
-	timer.wait_time = 0.001
+	timer.wait_time = 1
 
 
 #CENA 1
 const first_scene = preload("res://Scenes/Level1.tscn")
 
-##CENA 2
-#const second_scene = preload("res://Scenes/Level2.tscn")
+#CENA 2
+const second_scene = preload("res://Scenes/Level2.tscn")
 ##CENA 3
 #const second_scene = preload("res://Scenes/Level3.tscn")
 
@@ -47,10 +47,10 @@ func handle_selection(_current_selection):
 	if _current_selection == 0:
 		get_parent().add_child(first_scene.instance())
 		queue_free()
-#	# CENA 2
-#	if _current_selection == 1:
-#		get_parent().add_child(second_scene.instance())
-#		queue_free()
+	# CENA 2
+	if _current_selection == 1:
+		get_parent().add_child(second_scene.instance())
+		queue_free()
 #	# CENA 3
 #	if _current_selection == 2:
 #		get_parent().add_child(third_scene.instance())
