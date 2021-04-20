@@ -1,0 +1,61 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://assets/Players/Grace/Grace4.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
+[ext_resource path="res://assets/Players/Grace/Grace7.png" type="Texture" id=3]
+[ext_resource path="res://assets/Players/Grace/Grace3.png" type="Texture" id=4]
+[ext_resource path="res://assets/Players/Grace/Grace6.png" type="Texture" id=5]
+[ext_resource path="res://assets/Players/Grace/Grace5.png" type="Texture" id=6]
+[ext_resource path="res://assets/Players/Grace/Grace8.png" type="Texture" id=7]
+[ext_resource path="res://assets/Players/Grace/Grace1.png" type="Texture" id=8]
+[ext_resource path="res://assets/Players/Grace/Grace9.png" type="Texture" id=9]
+[ext_resource path="res://assets/Players/Grace/Grace2.png" type="Texture" id=10]
+[ext_resource path="res://Audio/Jump.wav" type="AudioStream" id=11]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 47.5111
+height = 40.0
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 8 ), ExtResource( 10 ), ExtResource( 4 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "walking",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "jumping",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 50.0
+height = 54.0486
+
+[node name="GraceHoper" type="KinematicBody2D"]
+position = Vector2( 53.1808, 8.99628 )
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -145.231, 87.3099 )
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -144.163, 94.7736 )
+frames = SubResource( 2 )
+animation = "walking"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -146.867, 87.3263 )
+shape = SubResource( 3 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 11 )

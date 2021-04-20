@@ -1,0 +1,37 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets/Items/Bug/Bug3.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Bug.gd" type="Script" id=2]
+[ext_resource path="res://assets/Items/Bug/Bug2.png" type="Texture" id=3]
+[ext_resource path="res://assets/Items/Bug/Bug4.png" type="Texture" id=4]
+[ext_resource path="res://assets/Items/Bug/Bug1.png" type="Texture" id=5]
+[ext_resource path="res://Audio/forceField_001.ogg" type="AudioStream" id=6]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 50.0
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 3 ), ExtResource( 1 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "flying",
+"speed": 5.0
+} ]
+
+[node name="Bug" type="Area2D"]
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -95.8622, 316.177 )
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -94.4104, 319.452 )
+scale = Vector2( 1.65054, 1.53033 )
+frames = SubResource( 2 )
+animation = "flying"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -15.146
+[connection signal="body_entered" from="." to="." method="_on_Bug_body_entered"]
