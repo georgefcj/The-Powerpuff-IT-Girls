@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Option_Font.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Tittle.tres" type="DynamicFont" id=2]
 [ext_resource path="res://MainMenu.gd" type="Script" id=3]
+[ext_resource path="res://Audio/Pickup_Coin.wav" type="AudioStream" id=4]
 
 [node name="MarginContainer" type="MarginContainer"]
 anchor_right = 1.0
@@ -11,6 +12,11 @@ script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="SelectorSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -28.69
+pitch_scale = 2.79
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 640.0
