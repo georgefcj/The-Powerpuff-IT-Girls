@@ -1,6 +1,15 @@
 
 extends MarginContainer
 
+var timer
+
+func _init():
+	timer = Timer.new()
+	add_child(timer)
+	timer.autostart = true
+	timer.wait_time = 0.001
+
+
 #CENA 1
 const first_scene = preload("res://Scenes/Level1.tscn")
 
@@ -20,15 +29,17 @@ func _ready ():
 	set_current_selection(0)
 	
 func _process(delta):
-	if Input.is_action_just_pressed("ui_down")and current_selection < 2:
+	if Input.is_action_just_pressed("ui_right")and current_selection < 2:
 		$SelectorSound.play()
 		current_selection += 1
 		set_current_selection(current_selection)
-	elif Input.is_action_just_pressed("ui_up") and current_selection > 0:
+	elif Input.is_action_just_pressed("ui_left") and current_selection > 0:
 		$SelectorSound.play()
 		current_selection -= 1
 		set_current_selection(current_selection)
 	elif Input.is_action_just_pressed("ui_accept"):
+		$ConfirmSound.play()
+		yield(get_tree().create_timer(0.5), "timeout")
 		handle_selection(current_selection)
 		
 func handle_selection(_current_selection):
