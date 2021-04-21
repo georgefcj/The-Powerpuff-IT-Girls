@@ -1,49 +1,159 @@
 [gd_resource type="TileSet" load_steps=39 format=2]
 
-[ext_resource path="res://assets/Tiles/boxCoin_disabled.png" type="Texture" id=1]
-[ext_resource path="res://assets/Tiles/boxCoin_disabled_boxed.png" type="Texture" id=2]
-[ext_resource path="res://assets/Tiles/boxCrate.png" type="Texture" id=3]
-[ext_resource path="res://assets/Tiles/boxCoin.png" type="Texture" id=4]
-[ext_resource path="res://assets/Tiles/bombWhite.png" type="Texture" id=5]
-[ext_resource path="res://assets/Tiles/bomb.png" type="Texture" id=6]
-[ext_resource path="res://assets/Tiles/boxCoin_boxed.png" type="Texture" id=7]
-[ext_resource path="res://assets/Tiles/bridgeA.png" type="Texture" id=8]
-[ext_resource path="res://assets/Tiles/ladderTop.png" type="Texture" id=9]
-[ext_resource path="res://assets/Tiles/weightAttached.png" type="Texture" id=10]
-[ext_resource path="res://assets/Tiles/ladderMid.png" type="Texture" id=11]
-[ext_resource path="res://assets/Tiles/boxCrate_warning.png" type="Texture" id=12]
-[ext_resource path="res://assets/Tiles/doorOpen_top.png" type="Texture" id=13]
-[ext_resource path="res://assets/Tiles/boxItem_disabled.png" type="Texture" id=14]
-[ext_resource path="res://assets/Tiles/boxCrate_double.png" type="Texture" id=15]
-[ext_resource path="res://assets/Tiles/doorOpen_mid.png" type="Texture" id=16]
-[ext_resource path="res://assets/Tiles/boxItem.png" type="Texture" id=17]
-[ext_resource path="res://assets/Tiles/boxItem_boxed.png" type="Texture" id=18]
-[ext_resource path="res://assets/Tiles/chain.png" type="Texture" id=19]
-[ext_resource path="res://assets/Tiles/doorClosed_mid.png" type="Texture" id=20]
-[ext_resource path="res://assets/Tiles/grass.png" type="Texture" id=21]
-[ext_resource path="res://assets/Tiles/fence.png" type="Texture" id=22]
-[ext_resource path="res://assets/Tiles/brickGrey.png" type="Texture" id=23]
-[ext_resource path="res://assets/Tiles/doorClosed_top.png" type="Texture" id=24]
-[ext_resource path="res://assets/Tiles/boxExplosive_disabled.png" type="Texture" id=25]
-[ext_resource path="res://assets/Tiles/lava.png" type="Texture" id=26]
-[ext_resource path="res://assets/Tiles/boxExplosive.png" type="Texture" id=27]
-[ext_resource path="res://assets/Tiles/boxExplosive_used.png" type="Texture" id=28]
-[ext_resource path="res://assets/Tiles/torch1.png" type="Texture" id=29]
-[ext_resource path="res://assets/Tiles/torch2.png" type="Texture" id=30]
-[ext_resource path="res://assets/Tiles/torchOff.png" type="Texture" id=31]
-[ext_resource path="res://assets/Tiles/weight.png" type="Texture" id=32]
-[ext_resource path="res://assets/Tiles/brickBrown.png" type="Texture" id=33]
-[ext_resource path="res://assets/Tiles/boxCrate_single.png" type="Texture" id=34]
-[ext_resource path="res://assets/Tiles/boxItem_disabled_boxed.png" type="Texture" id=35]
-[ext_resource path="res://assets/Tiles/bush.png" type="Texture" id=36]
-[ext_resource path="res://assets/Tiles/cactus.png" type="Texture" id=37]
+[sub_resource type="StreamTexture" id=50]
+flags = 4
+load_path = "res://.import/bomb.png-6ec63d47161bc287228bdaf2b3d86e64.stex"
+
+[sub_resource type="StreamTexture" id=51]
+flags = 4
+load_path = "res://.import/bombWhite.png-793f0e0ef8a25bf9b744d7a0167a6144.stex"
+
+[sub_resource type="StreamTexture" id=52]
+flags = 4
+load_path = "res://.import/boxExplosive.png-6838bec909e7ecf8334ffd16d95d34b2.stex"
+
+[sub_resource type="StreamTexture" id=53]
+flags = 4
+load_path = "res://.import/boxExplosive_disabled.png-9d588da27f582cfa3c4a0fcc30ade013.stex"
+
+[sub_resource type="StreamTexture" id=54]
+flags = 4
+load_path = "res://.import/boxExplosive_used.png-65134e62cd6cdb6657a6801b38309f5e.stex"
+
+[sub_resource type="StreamTexture" id=55]
+flags = 4
+load_path = "res://.import/boxItem.png-59177414d5d9ae5e33fd78c36d4ecdb7.stex"
+
+[sub_resource type="StreamTexture" id=56]
+flags = 4
+load_path = "res://.import/boxItem_boxed.png-75bd0f42b80f9990420bcb965a87fb43.stex"
+
+[sub_resource type="StreamTexture" id=57]
+flags = 4
+load_path = "res://.import/boxItem_disabled.png-3c7b08a2e684c30519e040c5b1e7824f.stex"
+
+[sub_resource type="StreamTexture" id=58]
+flags = 4
+load_path = "res://.import/boxItem_disabled_boxed.png-776b466e8effa2223f4b776d511a0df5.stex"
+
+[sub_resource type="StreamTexture" id=59]
+flags = 4
+load_path = "res://.import/brickBrown.png-19d2120824cfb00ec77d945d582aecf6.stex"
+
+[sub_resource type="StreamTexture" id=60]
+flags = 4
+load_path = "res://.import/brickGrey.png-13eb4e2ef44a9ebe8f70b773be035eb1.stex"
+
+[sub_resource type="StreamTexture" id=61]
+flags = 4
+load_path = "res://.import/bridgeA.png-15d9c1aa171757f76677ebfd35206363.stex"
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 
+[sub_resource type="StreamTexture" id=62]
+flags = 4
+load_path = "res://.import/boxCoin.png-48c04b54d3f10a1b0fba747f9ca9d9be.stex"
+
+[sub_resource type="StreamTexture" id=49]
+flags = 4
+load_path = "res://.import/bush.png-bfbbd68c2321ab182a5a297327dbe2e4.stex"
+
+[sub_resource type="StreamTexture" id=48]
+flags = 4
+load_path = "res://.import/cactus.png-7a776f8add946278242581a5cb20f5d3.stex"
+
+[sub_resource type="StreamTexture" id=63]
+flags = 4
+load_path = "res://.import/chain.png-7c436d103f7a4c54468fd818c445eb7a.stex"
+
+[sub_resource type="StreamTexture" id=64]
+flags = 4
+load_path = "res://.import/doorClosed_mid.png-9f892e3f02cf9a11930855dfe254dc60.stex"
+
+[sub_resource type="StreamTexture" id=65]
+flags = 4
+load_path = "res://.import/doorClosed_top.png-b40d1dd77d5866443d77b47458e741e5.stex"
+
+[sub_resource type="StreamTexture" id=66]
+flags = 4
+load_path = "res://.import/doorOpen_mid.png-5d4591f482ebde98e20113fa91433aaf.stex"
+
+[sub_resource type="StreamTexture" id=67]
+flags = 4
+load_path = "res://.import/doorOpen_top.png-89c5845dc30720578fb57bca64fd8723.stex"
+
+[sub_resource type="StreamTexture" id=68]
+flags = 4
+load_path = "res://.import/fence.png-7b812b57e389846bf2a87d83a7271a3f.stex"
+
+[sub_resource type="StreamTexture" id=69]
+flags = 4
+load_path = "res://.import/grass.png-52d4600787df68fd8967feb9e4a291de.stex"
+
+[sub_resource type="StreamTexture" id=70]
+flags = 4
+load_path = "res://.import/ladderMid.png-b93f257fa3ed37d6995b2cf165d8feb4.stex"
+
+[sub_resource type="StreamTexture" id=71]
+flags = 4
+load_path = "res://.import/boxCoin_boxed.png-3c1ff1470922cb37924e024ae454f124.stex"
+
+[sub_resource type="StreamTexture" id=72]
+flags = 4
+load_path = "res://.import/ladderTop.png-50e124c4595c1660bb4bfea2befc2a75.stex"
+
+[sub_resource type="StreamTexture" id=73]
+flags = 4
+load_path = "res://.import/lava.png-9c780e3e4031bec790cf172811b43804.stex"
+
+[sub_resource type="StreamTexture" id=74]
+flags = 4
+load_path = "res://.import/torch1.png-b0380d3bdbb426565c71eeb61dcf97f0.stex"
+
+[sub_resource type="StreamTexture" id=75]
+flags = 4
+load_path = "res://.import/torch2.png-aa43c1476ec361412146cec6673b75d3.stex"
+
+[sub_resource type="StreamTexture" id=76]
+flags = 4
+load_path = "res://.import/torchOff.png-d97ec8ca7125ab9b34caef03baec3018.stex"
+
+[sub_resource type="StreamTexture" id=77]
+flags = 4
+load_path = "res://.import/weight.png-4e643e8750119f21be31e8a9b22bd0c4.stex"
+
+[sub_resource type="StreamTexture" id=78]
+flags = 4
+load_path = "res://.import/weightAttached.png-9f9be19fcac6bdc578b25d7119b81a7e.stex"
+
+[sub_resource type="StreamTexture" id=79]
+flags = 4
+load_path = "res://.import/boxCoin_disabled.png-1e3cf5b88851f71cbcc3be90553f66ba.stex"
+
+[sub_resource type="StreamTexture" id=80]
+flags = 4
+load_path = "res://.import/boxCoin_disabled_boxed.png-bfbdc3b3a14a1db42d6b88633b45c4c2.stex"
+
+[sub_resource type="StreamTexture" id=81]
+flags = 4
+load_path = "res://.import/boxCrate.png-868faed1929259fbcad5bef3a970d6da.stex"
+
+[sub_resource type="StreamTexture" id=82]
+flags = 4
+load_path = "res://.import/boxCrate_double.png-0acbe7a174d440260c0b5eb9020d1e9d.stex"
+
+[sub_resource type="StreamTexture" id=83]
+flags = 4
+load_path = "res://.import/boxCrate_single.png-88cb6c2e3237ddd09a6d464ab2dac77f.stex"
+
+[sub_resource type="StreamTexture" id=84]
+flags = 4
+load_path = "res://.import/boxCrate_warning.png-5fb317fb93ca9367d3bd3352be3d3f9f.stex"
+
 [resource]
 0/name = "bomb"
-0/texture = ExtResource( 6 )
+0/texture = SubResource( 50 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 128, 128 )
@@ -57,7 +167,7 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 0/shapes = [  ]
 0/z_index = 0
 1/name = "bombWhite"
-1/texture = ExtResource( 5 )
+1/texture = SubResource( 51 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 0, 0, 128, 128 )
@@ -71,7 +181,7 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 1/shapes = [  ]
 1/z_index = 0
 2/name = "boxCoin"
-2/texture = ExtResource( 4 )
+2/texture = SubResource( 62 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 0, 0, 128, 128 )
@@ -92,7 +202,7 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 } ]
 2/z_index = 0
 3/name = "boxCoin_boxed"
-3/texture = ExtResource( 7 )
+3/texture = SubResource( 71 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 0, 0, 128, 128 )
@@ -106,7 +216,7 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 3/shapes = [  ]
 3/z_index = 0
 4/name = "boxCoin_disabled"
-4/texture = ExtResource( 1 )
+4/texture = SubResource( 79 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 0, 0, 128, 128 )
@@ -120,7 +230,7 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 4/shapes = [  ]
 4/z_index = 0
 5/name = "boxCoin_disabled_boxed"
-5/texture = ExtResource( 2 )
+5/texture = SubResource( 80 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
 5/region = Rect2( 0, 0, 128, 128 )
@@ -134,7 +244,7 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 5/shapes = [  ]
 5/z_index = 0
 6/name = "boxCrate"
-6/texture = ExtResource( 3 )
+6/texture = SubResource( 81 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( 0, 0, 128, 128 )
@@ -148,7 +258,7 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 6/shapes = [  ]
 6/z_index = 0
 7/name = "boxCrate_double"
-7/texture = ExtResource( 15 )
+7/texture = SubResource( 82 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
 7/region = Rect2( 0, 0, 128, 128 )
@@ -162,7 +272,7 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 7/shapes = [  ]
 7/z_index = 0
 8/name = "boxCrate_single"
-8/texture = ExtResource( 34 )
+8/texture = SubResource( 83 )
 8/tex_offset = Vector2( 0, 0 )
 8/modulate = Color( 1, 1, 1, 1 )
 8/region = Rect2( 0, 0, 128, 128 )
@@ -176,7 +286,7 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 8/shapes = [  ]
 8/z_index = 0
 9/name = "boxCrate_warning"
-9/texture = ExtResource( 12 )
+9/texture = SubResource( 84 )
 9/tex_offset = Vector2( 0, 0 )
 9/modulate = Color( 1, 1, 1, 1 )
 9/region = Rect2( 0, 0, 128, 128 )
@@ -190,7 +300,7 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 9/shapes = [  ]
 9/z_index = 0
 10/name = "boxExplosive"
-10/texture = ExtResource( 27 )
+10/texture = SubResource( 52 )
 10/tex_offset = Vector2( 0, 0 )
 10/modulate = Color( 1, 1, 1, 1 )
 10/region = Rect2( 0, 0, 128, 128 )
@@ -204,7 +314,7 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 10/shapes = [  ]
 10/z_index = 0
 11/name = "boxExplosive_disabled"
-11/texture = ExtResource( 25 )
+11/texture = SubResource( 53 )
 11/tex_offset = Vector2( 0, 0 )
 11/modulate = Color( 1, 1, 1, 1 )
 11/region = Rect2( 0, 0, 128, 128 )
@@ -218,7 +328,7 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 11/shapes = [  ]
 11/z_index = 0
 12/name = "boxExplosive_used"
-12/texture = ExtResource( 28 )
+12/texture = SubResource( 54 )
 12/tex_offset = Vector2( 0, 0 )
 12/modulate = Color( 1, 1, 1, 1 )
 12/region = Rect2( 0, 0, 128, 128 )
@@ -232,7 +342,7 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 12/shapes = [  ]
 12/z_index = 0
 13/name = "boxItem"
-13/texture = ExtResource( 17 )
+13/texture = SubResource( 55 )
 13/tex_offset = Vector2( 0, 0 )
 13/modulate = Color( 1, 1, 1, 1 )
 13/region = Rect2( 0, 0, 128, 128 )
@@ -246,7 +356,7 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 13/shapes = [  ]
 13/z_index = 0
 14/name = "boxItem_boxed"
-14/texture = ExtResource( 18 )
+14/texture = SubResource( 56 )
 14/tex_offset = Vector2( 0, 0 )
 14/modulate = Color( 1, 1, 1, 1 )
 14/region = Rect2( 0, 0, 128, 128 )
@@ -260,7 +370,7 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 14/shapes = [  ]
 14/z_index = 0
 15/name = "boxItem_disabled"
-15/texture = ExtResource( 14 )
+15/texture = SubResource( 57 )
 15/tex_offset = Vector2( 0, 0 )
 15/modulate = Color( 1, 1, 1, 1 )
 15/region = Rect2( 0, 0, 128, 128 )
@@ -274,7 +384,7 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 15/shapes = [  ]
 15/z_index = 0
 16/name = "boxItem_disabled_boxed"
-16/texture = ExtResource( 35 )
+16/texture = SubResource( 58 )
 16/tex_offset = Vector2( 0, 0 )
 16/modulate = Color( 1, 1, 1, 1 )
 16/region = Rect2( 0, 0, 128, 128 )
@@ -288,7 +398,7 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 16/shapes = [  ]
 16/z_index = 0
 17/name = "brickBrown"
-17/texture = ExtResource( 33 )
+17/texture = SubResource( 59 )
 17/tex_offset = Vector2( 0, 0 )
 17/modulate = Color( 1, 1, 1, 1 )
 17/region = Rect2( 0, 0, 128, 128 )
@@ -302,7 +412,7 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 17/shapes = [  ]
 17/z_index = 0
 18/name = "brickGrey"
-18/texture = ExtResource( 23 )
+18/texture = SubResource( 60 )
 18/tex_offset = Vector2( 0, 0 )
 18/modulate = Color( 1, 1, 1, 1 )
 18/region = Rect2( 0, 0, 128, 128 )
@@ -316,7 +426,7 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 18/shapes = [  ]
 18/z_index = 0
 19/name = "bridgeA"
-19/texture = ExtResource( 8 )
+19/texture = SubResource( 61 )
 19/tex_offset = Vector2( 0, 0 )
 19/modulate = Color( 1, 1, 1, 1 )
 19/region = Rect2( 0, 0, 128, 128 )
@@ -330,7 +440,7 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 19/shapes = [  ]
 19/z_index = 0
 20/name = "bush"
-20/texture = ExtResource( 36 )
+20/texture = SubResource( 49 )
 20/tex_offset = Vector2( 0, 0 )
 20/modulate = Color( 1, 1, 1, 1 )
 20/region = Rect2( 0, 0, 128, 128 )
@@ -344,7 +454,7 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 20/shapes = [  ]
 20/z_index = 0
 21/name = "cactus"
-21/texture = ExtResource( 37 )
+21/texture = SubResource( 48 )
 21/tex_offset = Vector2( 0, 0 )
 21/modulate = Color( 1, 1, 1, 1 )
 21/region = Rect2( 0, 0, 128, 128 )
@@ -358,7 +468,7 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 21/shapes = [  ]
 21/z_index = 0
 22/name = "chain"
-22/texture = ExtResource( 19 )
+22/texture = SubResource( 63 )
 22/tex_offset = Vector2( 0, 0 )
 22/modulate = Color( 1, 1, 1, 1 )
 22/region = Rect2( 0, 0, 128, 128 )
@@ -372,7 +482,7 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 22/shapes = [  ]
 22/z_index = 0
 23/name = "doorClosed_mid"
-23/texture = ExtResource( 20 )
+23/texture = SubResource( 64 )
 23/tex_offset = Vector2( 0, 0 )
 23/modulate = Color( 1, 1, 1, 1 )
 23/region = Rect2( 0, 0, 128, 128 )
@@ -386,7 +496,7 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 23/shapes = [  ]
 23/z_index = 0
 24/name = "doorClosed_top"
-24/texture = ExtResource( 24 )
+24/texture = SubResource( 65 )
 24/tex_offset = Vector2( 0, 0 )
 24/modulate = Color( 1, 1, 1, 1 )
 24/region = Rect2( 0, 0, 128, 128 )
@@ -400,7 +510,7 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 24/shapes = [  ]
 24/z_index = 0
 25/name = "doorOpen_mid"
-25/texture = ExtResource( 16 )
+25/texture = SubResource( 66 )
 25/tex_offset = Vector2( 0, 0 )
 25/modulate = Color( 1, 1, 1, 1 )
 25/region = Rect2( 0, 0, 128, 128 )
@@ -414,7 +524,7 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 25/shapes = [  ]
 25/z_index = 0
 26/name = "doorOpen_top"
-26/texture = ExtResource( 13 )
+26/texture = SubResource( 67 )
 26/tex_offset = Vector2( 0, 0 )
 26/modulate = Color( 1, 1, 1, 1 )
 26/region = Rect2( 0, 0, 128, 128 )
@@ -428,7 +538,7 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 26/shapes = [  ]
 26/z_index = 0
 27/name = "fence"
-27/texture = ExtResource( 22 )
+27/texture = SubResource( 68 )
 27/tex_offset = Vector2( 0, 0 )
 27/modulate = Color( 1, 1, 1, 1 )
 27/region = Rect2( 0, 0, 128, 128 )
@@ -442,7 +552,7 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 27/shapes = [  ]
 27/z_index = 0
 28/name = "grass"
-28/texture = ExtResource( 21 )
+28/texture = SubResource( 69 )
 28/tex_offset = Vector2( 0, 0 )
 28/modulate = Color( 1, 1, 1, 1 )
 28/region = Rect2( 0, 0, 128, 128 )
@@ -456,7 +566,7 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 28/shapes = [  ]
 28/z_index = 0
 29/name = "ladderMid"
-29/texture = ExtResource( 11 )
+29/texture = SubResource( 70 )
 29/tex_offset = Vector2( 0, 0 )
 29/modulate = Color( 1, 1, 1, 1 )
 29/region = Rect2( 0, 0, 128, 128 )
@@ -470,7 +580,7 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 29/shapes = [  ]
 29/z_index = 0
 30/name = "ladderTop"
-30/texture = ExtResource( 9 )
+30/texture = SubResource( 72 )
 30/tex_offset = Vector2( 0, 0 )
 30/modulate = Color( 1, 1, 1, 1 )
 30/region = Rect2( 0, 0, 128, 128 )
@@ -484,7 +594,7 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 30/shapes = [  ]
 30/z_index = 0
 31/name = "lava"
-31/texture = ExtResource( 26 )
+31/texture = SubResource( 73 )
 31/tex_offset = Vector2( 0, 0 )
 31/modulate = Color( 1, 1, 1, 1 )
 31/region = Rect2( 0, 0, 128, 128 )
@@ -498,7 +608,7 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 31/shapes = [  ]
 31/z_index = 0
 32/name = "torch1"
-32/texture = ExtResource( 29 )
+32/texture = SubResource( 74 )
 32/tex_offset = Vector2( 0, 0 )
 32/modulate = Color( 1, 1, 1, 1 )
 32/region = Rect2( 0, 0, 128, 128 )
@@ -512,7 +622,7 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 32/shapes = [  ]
 32/z_index = 0
 33/name = "torch2"
-33/texture = ExtResource( 30 )
+33/texture = SubResource( 75 )
 33/tex_offset = Vector2( 0, 0 )
 33/modulate = Color( 1, 1, 1, 1 )
 33/region = Rect2( 0, 0, 128, 128 )
@@ -526,7 +636,7 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 33/shapes = [  ]
 33/z_index = 0
 34/name = "torchOff"
-34/texture = ExtResource( 31 )
+34/texture = SubResource( 76 )
 34/tex_offset = Vector2( 0, 0 )
 34/modulate = Color( 1, 1, 1, 1 )
 34/region = Rect2( 0, 0, 128, 128 )
@@ -540,7 +650,7 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 34/shapes = [  ]
 34/z_index = 0
 35/name = "weight"
-35/texture = ExtResource( 32 )
+35/texture = SubResource( 77 )
 35/tex_offset = Vector2( 0, 0 )
 35/modulate = Color( 1, 1, 1, 1 )
 35/region = Rect2( 0, 0, 128, 128 )
@@ -554,7 +664,7 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 35/shapes = [  ]
 35/z_index = 0
 36/name = "weightAttached"
-36/texture = ExtResource( 10 )
+36/texture = SubResource( 78 )
 36/tex_offset = Vector2( 0, 0 )
 36/modulate = Color( 1, 1, 1, 1 )
 36/region = Rect2( 0, 0, 128, 128 )

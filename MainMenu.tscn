@@ -17,7 +17,7 @@
 [ext_resource path="res://assets/Players/Mary/Mary3.png" type="Texture" id=15]
 [ext_resource path="res://assets/Players/Grace/Grace3.png" type="Texture" id=16]
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 6 ), ExtResource( 9 ), ExtResource( 15 ), ExtResource( 13 ) ],
 "loop": true,
@@ -25,7 +25,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="SpriteFrames" id=3]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 10 ), ExtResource( 12 ), ExtResource( 16 ), ExtResource( 14 ) ],
 "loop": true,
@@ -33,7 +33,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=3]
 animations = [ {
 "frames": [ ExtResource( 5 ), ExtResource( 11 ), ExtResource( 8 ), ExtResource( 7 ) ],
 "loop": true,
@@ -70,19 +70,20 @@ margin_bottom = 360.0
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="CenterContainer"]
 position = Vector2( 504.792, 242.312 )
-frames = SubResource( 2 )
-frame = 1
+frames = SubResource( 1 )
+frame = 3
 playing = true
 
 [node name="Grace Hopper" type="AnimatedSprite" parent="CenterContainer"]
 position = Vector2( 281.68, 238.521 )
-frames = SubResource( 3 )
-frame = 3
+frames = SubResource( 2 )
+frame = 1
 playing = true
 
 [node name="Mitchell Baker" type="AnimatedSprite" parent="CenterContainer"]
 position = Vector2( 91.87, 238.651 )
-frames = SubResource( 1 )
+frames = SubResource( 3 )
+frame = 2
 playing = true
 
 [node name="VBoxContainer" type="Container" parent="CenterContainer"]

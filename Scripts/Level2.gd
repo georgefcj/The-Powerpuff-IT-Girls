@@ -33,5 +33,5 @@ func _on_Flag_body_entered(body):
 	if body.name == "Player" and can_proceed:
 		get_tree().change_scene("res://Scenes/Level3.tscn")
 	elif body.name == "Player" and not can_proceed:
-		self.messages[PlayerStats.get_score()] = "Colete o(s) bug(s) restante(s)"
+		self.messages[PlayerStats.get_score()] = "Colete todos os BUGs"
 

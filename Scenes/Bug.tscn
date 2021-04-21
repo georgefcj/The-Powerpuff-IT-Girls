@@ -27,11 +27,10 @@ shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( -94.4104, 319.452 )
-scale = Vector2( 1.65054, 1.53033 )
 frames = SubResource( 2 )
 animation = "flying"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
-volume_db = -15.146
+volume_db = -20.0
 [connection signal="body_entered" from="." to="." method="_on_Bug_body_entered"]
