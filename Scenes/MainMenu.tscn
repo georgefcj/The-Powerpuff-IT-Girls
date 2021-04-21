@@ -1,25 +1,25 @@
 [gd_scene load_steps=20 format=2]
 
-[ext_resource path="res://Option_Font.tres" type="DynamicFont" id=1]
-[ext_resource path="res://Tittle.tres" type="DynamicFont" id=2]
-[ext_resource path="res://MainMenu.gd" type="Script" id=3]
-[ext_resource path="res://Audio/Pickup_Coin.wav" type="AudioStream" id=4]
-[ext_resource path="res://assets/Players/Mitchell/Mitchell1.png" type="Texture" id=5]
-[ext_resource path="res://assets/Players/Mary/Mary1.png" type="Texture" id=6]
+[ext_resource path="res://assets/Players/Grace/Grace4.png" type="Texture" id=1]
+[ext_resource path="res://Tilemaps/Option_Font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://assets/Tittle.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Scenes/MainMenu.gd" type="Script" id=4]
+[ext_resource path="res://assets/Players/Mitchell/Mitchell3.png" type="Texture" id=5]
+[ext_resource path="res://Audio/Pickup_Coin.wav" type="AudioStream" id=6]
 [ext_resource path="res://assets/Players/Mitchell/Mitchell4.png" type="Texture" id=7]
-[ext_resource path="res://assets/Players/Mitchell/Mitchell3.png" type="Texture" id=8]
-[ext_resource path="res://assets/Players/Mary/Mary2.png" type="Texture" id=9]
-[ext_resource path="res://assets/Players/Grace/Grace1.png" type="Texture" id=10]
-[ext_resource path="res://assets/Players/Mitchell/Mitchell2.png" type="Texture" id=11]
-[ext_resource path="res://assets/Players/Grace/Grace2.png" type="Texture" id=12]
-[ext_resource path="res://assets/Players/Mary/Mary4.png" type="Texture" id=13]
-[ext_resource path="res://assets/Players/Grace/Grace4.png" type="Texture" id=14]
-[ext_resource path="res://assets/Players/Mary/Mary3.png" type="Texture" id=15]
+[ext_resource path="res://assets/Players/Mitchell/Mitchell2.png" type="Texture" id=8]
+[ext_resource path="res://assets/Players/Mitchell/Mitchell1.png" type="Texture" id=9]
+[ext_resource path="res://assets/Players/Mary/Mary2.png" type="Texture" id=10]
+[ext_resource path="res://assets/Players/Grace/Grace1.png" type="Texture" id=11]
+[ext_resource path="res://assets/Players/Mary/Mary4.png" type="Texture" id=12]
+[ext_resource path="res://assets/Players/Mary/Mary3.png" type="Texture" id=13]
+[ext_resource path="res://assets/Players/Mary/Mary1.png" type="Texture" id=14]
+[ext_resource path="res://assets/Players/Grace/Grace2.png" type="Texture" id=15]
 [ext_resource path="res://assets/Players/Grace/Grace3.png" type="Texture" id=16]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 6 ), ExtResource( 9 ), ExtResource( 15 ), ExtResource( 13 ) ],
+"frames": [ ExtResource( 14 ), ExtResource( 10 ), ExtResource( 13 ), ExtResource( 12 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -27,7 +27,7 @@ animations = [ {
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 10 ), ExtResource( 12 ), ExtResource( 16 ), ExtResource( 14 ) ],
+"frames": [ ExtResource( 11 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 1 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -35,7 +35,7 @@ animations = [ {
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ ExtResource( 5 ), ExtResource( 11 ), ExtResource( 8 ), ExtResource( 7 ) ],
+"frames": [ ExtResource( 9 ), ExtResource( 8 ), ExtResource( 5 ), ExtResource( 7 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -44,18 +44,18 @@ animations = [ {
 [node name="MarginContainer" type="MarginContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 3 )
+script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="SelectorSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 4 )
+stream = ExtResource( 6 )
 volume_db = -28.69
 pitch_scale = 2.79
 
 [node name="ConfirmSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 4 )
+stream = ExtResource( 6 )
 volume_db = -20.788
 pitch_scale = 1.61
 
@@ -102,7 +102,7 @@ margin_bottom = 24.0
 margin_left = 141.0
 margin_right = 466.0
 margin_bottom = 24.0
-custom_fonts/font = ExtResource( 1 )
+custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "The Powerpuff IT Girls"
 
@@ -131,7 +131,7 @@ rect_min_size = Vector2( 200, 0 )
 margin_right = 8.0
 margin_bottom = 16.0
 rect_min_size = Vector2( 8, 0 )
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = ">"
 
@@ -139,7 +139,7 @@ text = ">"
 margin_left = 12.0
 margin_right = 149.0
 margin_bottom = 16.0
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Mitchell Baker"
 
@@ -157,7 +157,7 @@ rect_min_size = Vector2( 200, 0 )
 margin_right = 8.0
 margin_bottom = 16.0
 rect_min_size = Vector2( 8, 0 )
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = ">"
 
@@ -166,7 +166,7 @@ margin_left = 12.0
 margin_right = 149.0
 margin_bottom = 16.0
 rect_min_size = Vector2( 137, 0 )
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Grace Hopper"
 
@@ -184,7 +184,7 @@ rect_min_size = Vector2( 200, 0 )
 margin_right = 8.0
 margin_bottom = 16.0
 rect_min_size = Vector2( 8, 0 )
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = ">"
 
@@ -193,6 +193,6 @@ margin_left = 12.0
 margin_right = 157.0
 margin_bottom = 16.0
 rect_min_size = Vector2( 137, 0 )
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Mary Lou Jepsen"
