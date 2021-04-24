@@ -7,6 +7,7 @@ func _ready() -> void:
 	
 func _process(delta):
 	#$Player/Score.text = "Score: " + str(PlayerStats.get_score()) 
+	$Player/ScoreStatus.text = PlayerStats.score_count()
 	if PlayerStats.get_score() == 1:
 		$Player/Score.text = "Winifred Mitchell Baker é a presidente executiva e CEO da Fundação Mozilla e da Mozilla Corporation."
 		
@@ -36,21 +37,23 @@ func _process(delta):
 		
 	if PlayerStats.get_score() == 10:
 		$Player/Score.text = "Mitchell escreveu a missões da Mozilla: a Licença Pública da Mozilla em 1998, o Manifesto da Mozilla em 2007 e o Adendo ao Manifesto da Mozilla - também conhecido como Compromisso por uma Internet Saudável - em 2018."
-		
-
 
 func _on_OutTheMap_body_entered(body: Node) -> void:
 	if body.name == "Player":
 		$Player.position = PlayerStats.get_initial_position()
 
-
 func _on_AreaEnemy_body_entered(body: Node) -> void:
 	if body.name == "Player":
 		$AudioStreamPlayer2.play()
 		$Player.position = PlayerStats.get_initial_position()
+	
+func _on_Flag_body_entered(body):
+	var can_proceed = PlayerStats.get_score() == 10
+	if body.name == "Player" and can_proceed:
+		get_tree().change_scene("res://Scenes/MainMenu.tscn")
+		queue_free()
+	elif body.name == "Player" and not can_proceed:
+		$Player/Score2.text = "Colete todos os FIREFOXs"
 
-
-func _on_Flag_body_entered(body: Node) -> void:
-	if body.name == "Player":
-		get_tree().change_scene("res://Scenes/Level2.tscn")
-		
+func _on_Flag_body_exited(body):
+	$Player/Score2.text = ""

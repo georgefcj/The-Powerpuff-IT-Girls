@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://assets/Players/Grace/Grace4.png" type="Texture" id=1]
 [ext_resource path="res://Tilemaps/Option_Font.tres" type="DynamicFont" id=2]
@@ -16,6 +16,8 @@
 [ext_resource path="res://assets/Players/Mary/Mary1.png" type="Texture" id=14]
 [ext_resource path="res://assets/Players/Grace/Grace2.png" type="Texture" id=15]
 [ext_resource path="res://assets/Players/Grace/Grace3.png" type="Texture" id=16]
+[ext_resource path="res://Tilemaps/background.tres" type="TileSet" id=17]
+[ext_resource path="res://Audio/Juhani Junkala [Chiptune Adventures] 4. Stage Select.ogg" type="AudioStream" id=18]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -60,6 +62,7 @@ volume_db = -20.788
 pitch_scale = 1.61
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 margin_right = 640.0
 margin_bottom = 360.0
 color = Color( 0.14902, 0.14902, 0.14902, 1 )
@@ -71,19 +74,18 @@ margin_bottom = 360.0
 [node name="AnimatedSprite" type="AnimatedSprite" parent="CenterContainer"]
 position = Vector2( 504.792, 242.312 )
 frames = SubResource( 1 )
-frame = 3
+frame = 1
 playing = true
 
 [node name="Grace Hopper" type="AnimatedSprite" parent="CenterContainer"]
-position = Vector2( 281.68, 238.521 )
+position = Vector2( 294.379, 238.521 )
 frames = SubResource( 2 )
-frame = 1
+frame = 3
 playing = true
 
 [node name="Mitchell Baker" type="AnimatedSprite" parent="CenterContainer"]
 position = Vector2( 91.87, 238.651 )
 frames = SubResource( 3 )
-frame = 2
 playing = true
 
 [node name="VBoxContainer" type="Container" parent="CenterContainer"]
@@ -95,16 +97,32 @@ margin_right = 624.0
 margin_bottom = 202.0
 
 [node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
-margin_right = 608.0
-margin_bottom = 24.0
+anchor_left = -0.234
+anchor_top = -0.707
+anchor_right = 0.507
+anchor_bottom = 0.115
+rect_scale = Vector2( 2, 2 )
 
 [node name="Tittle" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer"]
-margin_left = 141.0
-margin_right = 466.0
-margin_bottom = 24.0
+margin_left = 124.0
+margin_right = 325.0
+margin_bottom = 51.0
 custom_fonts/font = ExtResource( 2 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "The Powerpuff IT Girls"
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 1, 0, 0.266667, 1 )
+text = "The Powerpuff
+  Girls"
+align = 1
+
+[node name="Tittle2" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer"]
+margin_left = 166.0
+margin_right = 284.0
+margin_bottom = 51.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0.6, 0.858824, 1 )
+text = "
+IT          "
 
 [node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
 anchor_top = 4.95455
@@ -196,3 +214,15 @@ rect_min_size = Vector2( 137, 0 )
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Mary Lou Jepsen"
+
+[node name="BG" type="TileMap" parent="."]
+z_index = -1
+tile_set = ExtResource( 17 )
+cell_size = Vector2( 640, 384 )
+format = 1
+tile_data = PoolIntArray( 0, 3, 0 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 18 )
+volume_db = -30.0
+autoplay = true

@@ -1,6 +1,6 @@
 extends Node
 
-var total_bugs = 5
+var total_bugs = 10
 var bugs_founded = 0
 
 func found_bug():
