@@ -29,14 +29,14 @@ outline_size = 1
 outline_color = Color( 0.231373, 0.960784, 0.992157, 1 )
 font_data = ExtResource( 30 )
 
-[sub_resource type="CircleShape2D" id=5]
+[sub_resource type="CircleShape2D" id=3]
 radius = 24.0
 
 [sub_resource type="SegmentShape2D" id=4]
 a = Vector2( 8174.91, 973.562 )
 b = Vector2( -2427.87, 968.44 )
 
-[sub_resource type="SpriteFrames" id=7]
+[sub_resource type="SpriteFrames" id=5]
 animations = [ {
 "frames": [ ExtResource( 7 ), ExtResource( 8 ) ],
 "loop": true,
@@ -164,7 +164,7 @@ position = Vector2( 600, 472 )
 [node name="AreaEnemy" type="Area2D" parent="Enemy"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/AreaEnemy"]
-shape = SubResource( 5 )
+shape = SubResource( 3 )
 
 [node name="Enemy2" parent="." instance=ExtResource( 25 )]
 position = Vector2( 2680, 312 )
@@ -172,7 +172,7 @@ position = Vector2( 2680, 312 )
 [node name="AreaEnemy" type="Area2D" parent="Enemy2"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy2/AreaEnemy"]
-shape = SubResource( 5 )
+shape = SubResource( 3 )
 
 [node name="Enemy3" parent="." instance=ExtResource( 25 )]
 position = Vector2( 4632, 344 )
@@ -180,7 +180,7 @@ position = Vector2( 4632, 344 )
 [node name="AreaEnemy" type="Area2D" parent="Enemy3"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy3/AreaEnemy"]
-shape = SubResource( 5 )
+shape = SubResource( 3 )
 
 [node name="Enemy4" parent="." instance=ExtResource( 25 )]
 position = Vector2( 5696, 304 )
@@ -188,7 +188,7 @@ position = Vector2( 5696, 304 )
 [node name="AreaEnemy" type="Area2D" parent="Enemy4"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy4/AreaEnemy"]
-shape = SubResource( 5 )
+shape = SubResource( 3 )
 
 [node name="OutTheMap" type="Area2D" parent="."]
 
@@ -236,7 +236,7 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Flag"]
 position = Vector2( -58.7993, -8.46353 )
-frames = SubResource( 7 )
+frames = SubResource( 5 )
 animation = "moving"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Flag"]

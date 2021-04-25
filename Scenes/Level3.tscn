@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://background.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Child4.tscn" type="PackedScene" id=2]
@@ -19,6 +19,12 @@
 size = 30
 outline_size = 1
 outline_color = Color( 0.678431, 0.796078, 0.92549, 1 )
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+outline_size = 1
+outline_color = Color( 0.6, 0.678431, 0.882353, 1 )
 font_data = ExtResource( 13 )
 
 [sub_resource type="SegmentShape2D" id=2]
@@ -66,6 +72,21 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="ScoreStatus" type="Label" parent="Mary"]
+margin_left = -319.911
+margin_top = -184.909
+margin_right = -218.911
+margin_bottom = -129.909
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.992157, 0.996078, 0.988235, 1 )
+align = 1
+valign = 1
+autowrap = true
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="OutOfTheMap" type="Area2D" parent="."]
 position = Vector2( 292.082, 123.817 )
 
@@ -78,22 +99,25 @@ shape = SubResource( 2 )
 position = Vector2( 258.681, 264.729 )
 
 [node name="Left" type="TouchScreenButton" parent="HUD/Gamepad"]
-position = Vector2( -235.463, 0 )
+position = Vector2( -247.236, 15.1361 )
+scale = Vector2( 0.9, 0.9 )
 normal = ExtResource( 11 )
 action = "LEFT"
 
 [node name="Right" type="TouchScreenButton" parent="HUD/Gamepad"]
-position = Vector2( -114.164, 2.37845 )
+position = Vector2( -159.572, 15.151 )
+scale = Vector2( 0.9, 0.9 )
 normal = ExtResource( 10 )
 action = "RIGHT"
 
 [node name="Jump" type="TouchScreenButton" parent="HUD/Gamepad"]
-position = Vector2( 291.564, -1.96262 )
+position = Vector2( 289.882, 16.5371 )
+scale = Vector2( 0.9, 0.9 )
 normal = ExtResource( 12 )
 action = "JUMP"
 
 [node name="PC" parent="." instance=ExtResource( 5 )]
-position = Vector2( 329.081, -43.4437 )
+position = Vector2( 322.354, -35.0347 )
 
 [node name="PC2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 2524.65, 403.903 )
