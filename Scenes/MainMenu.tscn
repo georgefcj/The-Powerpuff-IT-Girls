@@ -1,11 +1,9 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://assets/Players/Grace/Grace4.png" type="Texture" id=1]
 [ext_resource path="res://Tilemaps/Option_Font.tres" type="DynamicFont" id=2]
 [ext_resource path="res://assets/Tittle.tres" type="DynamicFont" id=3]
-[ext_resource path="res://Scenes/MainMenu.gd" type="Script" id=4]
 [ext_resource path="res://assets/Players/Mitchell/Mitchell3.png" type="Texture" id=5]
-[ext_resource path="res://Audio/Pickup_Coin.wav" type="AudioStream" id=6]
 [ext_resource path="res://assets/Players/Mitchell/Mitchell4.png" type="Texture" id=7]
 [ext_resource path="res://assets/Players/Mitchell/Mitchell2.png" type="Texture" id=8]
 [ext_resource path="res://assets/Players/Mitchell/Mitchell1.png" type="Texture" id=9]
@@ -18,24 +16,11 @@
 [ext_resource path="res://assets/Players/Grace/Grace3.png" type="Texture" id=16]
 [ext_resource path="res://Tilemaps/background.tres" type="TileSet" id=17]
 [ext_resource path="res://Audio/Juhani Junkala [Chiptune Adventures] 4. Stage Select.ogg" type="AudioStream" id=18]
+[ext_resource path="res://Scenes/TouchScreenButton.gd" type="Script" id=19]
+[ext_resource path="res://Scenes/TouchScreenButton2.gd" type="Script" id=20]
+[ext_resource path="res://Scenes/TouchScreenButton3.gd" type="Script" id=21]
 
 [sub_resource type="SpriteFrames" id=1]
-animations = [ {
-"frames": [ ExtResource( 14 ), ExtResource( 10 ), ExtResource( 13 ), ExtResource( 12 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-} ]
-
-[sub_resource type="SpriteFrames" id=2]
-animations = [ {
-"frames": [ ExtResource( 11 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 1 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-} ]
-
-[sub_resource type="SpriteFrames" id=3]
 animations = [ {
 "frames": [ ExtResource( 9 ), ExtResource( 8 ), ExtResource( 5 ), ExtResource( 7 ) ],
 "loop": true,
@@ -43,23 +28,37 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 80, 80 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 11 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 80, 80 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 14 ), ExtResource( 10 ), ExtResource( 13 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 80, 80 )
+
 [node name="MarginContainer" type="MarginContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="SelectorSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 6 )
-volume_db = -28.69
-pitch_scale = 2.79
-
-[node name="ConfirmSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 6 )
-volume_db = -20.788
-pitch_scale = 1.61
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
@@ -71,22 +70,37 @@ color = Color( 0.14902, 0.14902, 0.14902, 1 )
 margin_right = 640.0
 margin_bottom = 360.0
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="CenterContainer"]
-position = Vector2( 504.792, 242.312 )
+[node name="Mitchell Baker" type="AnimatedSprite" parent="CenterContainer"]
+position = Vector2( 91.87, 238.651 )
 frames = SubResource( 1 )
 frame = 1
 playing = true
 
-[node name="Grace Hopper" type="AnimatedSprite" parent="CenterContainer"]
-position = Vector2( 294.379, 238.521 )
-frames = SubResource( 2 )
-frame = 3
-playing = true
+[node name="TouchScreenButton" type="TouchScreenButton" parent="CenterContainer/Mitchell Baker"]
+position = Vector2( -81.7026, -66.7197 )
+shape = SubResource( 2 )
+script = ExtResource( 19 )
 
-[node name="Mitchell Baker" type="AnimatedSprite" parent="CenterContainer"]
-position = Vector2( 91.87, 238.651 )
+[node name="Grace Hopper" type="AnimatedSprite" parent="CenterContainer"]
+position = Vector2( 281.297, 240.766 )
 frames = SubResource( 3 )
 playing = true
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="CenterContainer/Grace Hopper"]
+position = Vector2( -85.8926, -67.0151 )
+shape = SubResource( 4 )
+script = ExtResource( 20 )
+
+[node name="Mary Lou" type="AnimatedSprite" parent="CenterContainer"]
+position = Vector2( 494.293, 245.283 )
+frames = SubResource( 5 )
+frame = 2
+playing = true
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="CenterContainer/Mary Lou"]
+position = Vector2( -82.117, -72.6783 )
+shape = SubResource( 6 )
+script = ExtResource( 21 )
 
 [node name="VBoxContainer" type="Container" parent="CenterContainer"]
 anchor_top = -0.255556
@@ -145,17 +159,8 @@ margin_right = 200.0
 margin_bottom = 16.0
 rect_min_size = Vector2( 200, 0 )
 
-[node name="Selector" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer/HBoxContainer"]
-margin_right = 8.0
-margin_bottom = 16.0
-rect_min_size = Vector2( 8, 0 )
-custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = ">"
-
 [node name="Option" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer/HBoxContainer"]
-margin_left = 12.0
-margin_right = 149.0
+margin_right = 137.0
 margin_bottom = 16.0
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
@@ -171,17 +176,8 @@ margin_right = 200.0
 margin_bottom = 16.0
 rect_min_size = Vector2( 200, 0 )
 
-[node name="Selector" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer2/HBoxContainer"]
-margin_right = 8.0
-margin_bottom = 16.0
-rect_min_size = Vector2( 8, 0 )
-custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = ">"
-
 [node name="Option" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer2/HBoxContainer"]
-margin_left = 12.0
-margin_right = 149.0
+margin_right = 137.0
 margin_bottom = 16.0
 rect_min_size = Vector2( 137, 0 )
 custom_fonts/font = ExtResource( 3 )
@@ -198,17 +194,8 @@ margin_right = 200.0
 margin_bottom = 16.0
 rect_min_size = Vector2( 200, 0 )
 
-[node name="Selector" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer3/HBoxContainer"]
-margin_right = 8.0
-margin_bottom = 16.0
-rect_min_size = Vector2( 8, 0 )
-custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = ">"
-
 [node name="Option" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer3/HBoxContainer"]
-margin_left = 12.0
-margin_right = 157.0
+margin_right = 145.0
 margin_bottom = 16.0
 rect_min_size = Vector2( 137, 0 )
 custom_fonts/font = ExtResource( 3 )
@@ -226,3 +213,6 @@ tile_data = PoolIntArray( 0, 3, 0 )
 stream = ExtResource( 18 )
 volume_db = -30.0
 autoplay = true
+[connection signal="pressed" from="CenterContainer/Mitchell Baker/TouchScreenButton" to="CenterContainer/Mitchell Baker/TouchScreenButton" method="_on_TouchScreenButton_pressed"]
+[connection signal="pressed" from="CenterContainer/Grace Hopper/TouchScreenButton" to="CenterContainer/Grace Hopper/TouchScreenButton" method="_on_TouchScreenButton_pressed"]
+[connection signal="pressed" from="CenterContainer/Mary Lou/TouchScreenButton" to="CenterContainer/Mary Lou/TouchScreenButton" method="_on_TouchScreenButton_pressed"]
