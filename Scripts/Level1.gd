@@ -3,6 +3,7 @@ extends Node2D
 
 
 func _ready() -> void:
+	PlayerStats.set_score(0)
 	PlayerStats.set_initial_position($Player.position)
 	
 func _process(delta):
