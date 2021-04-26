@@ -17,3 +17,6 @@ func set_initial_position(position):
 
 func get_initial_position():
 	return self.initial_position
+
+func set_score(score):
+	self.score = score
