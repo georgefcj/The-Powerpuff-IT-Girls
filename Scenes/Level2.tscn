@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Tilemaps/background.tres" type="TileSet" id=1]
 [ext_resource path="res://Tilemaps/items.tres" type="TileSet" id=2]
@@ -7,6 +7,9 @@
 [ext_resource path="res://assets/Items/Flag2.png" type="Texture" id=5]
 [ext_resource path="res://Audio/Laser1.wav" type="AudioStream" id=6]
 [ext_resource path="res://Scenes/Enemy2.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/transparentLight/transparentLight24.png" type="Texture" id=8]
+[ext_resource path="res://assets/transparentLight/transparentLight23.png" type="Texture" id=9]
+[ext_resource path="res://assets/transparentLight/transparentLight22.png" type="Texture" id=10]
 [ext_resource path="res://Scenes/GraceHopper.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Bug.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scripts/Level2.gd" type="Script" id=13]
@@ -14,7 +17,7 @@
 [ext_resource path="res://Tilemaps/ground2.tres" type="TileSet" id=18]
 [ext_resource path="res://Fonts/upheavtt.ttf" type="DynamicFontData" id=19]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=4]
 size = 30
 outline_size = 1
 outline_color = Color( 0.231373, 0.960784, 0.992157, 1 )
@@ -32,7 +35,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=4]
+[sub_resource type="CapsuleShape2D" id=6]
 radius = 56.2699
 
 [sub_resource type="CircleShape2D" id=5]
@@ -75,7 +78,7 @@ margin_left = -348.0
 margin_top = -200.0
 margin_right = -247.0
 margin_bottom = -145.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
@@ -93,7 +96,7 @@ margin_left = -254.0
 margin_top = -194.0
 margin_right = 497.0
 margin_bottom = 7.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
@@ -166,7 +169,7 @@ animation = "moving"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Flag"]
 position = Vector2( -72.1628, -6.23628 )
-shape = SubResource( 4 )
+shape = SubResource( 6 )
 
 [node name="Enemy2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 711.149, 597.322 )
@@ -293,6 +296,28 @@ z_index = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy15/AreaEnemy"]
 shape = SubResource( 5 )
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="Gamepad" type="Node2D" parent="HUD"]
+
+[node name="Left" type="TouchScreenButton" parent="HUD/Gamepad"]
+position = Vector2( 16, 272 )
+scale = Vector2( 0.9, 0.9 )
+normal = ExtResource( 10 )
+action = "LEFT"
+
+[node name="Right" type="TouchScreenButton" parent="HUD/Gamepad"]
+position = Vector2( 120, 272 )
+scale = Vector2( 0.9, 0.9 )
+normal = ExtResource( 9 )
+action = "RIGHT"
+
+[node name="Jump" type="TouchScreenButton" parent="HUD/Gamepad"]
+position = Vector2( 552, 272 )
+scale = Vector2( 0.9, 0.9 )
+normal = ExtResource( 8 )
+action = "JUMP"
 [connection signal="body_entered" from="OutTheMap" to="." method="_on_OutTheMap_body_entered"]
 [connection signal="body_entered" from="Flag" to="." method="_on_Flag_body_entered"]
 [connection signal="body_entered" from="Enemy2/AreaEnemy" to="." method="_on_AreaEnemy_body_entered"]
