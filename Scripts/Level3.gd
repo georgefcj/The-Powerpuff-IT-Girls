@@ -2,6 +2,8 @@ extends Node2D
 
 
 func _ready() -> void:
+	PlayerStats.set_score(0)
+	PlayerStats.set_children(0)
 	PlayerStats.set_initial_position($Mary.position)
 	
 func _process(delta):
@@ -25,9 +27,7 @@ func _on_OutTheMap_body_entered(body: Node) -> void:
 		$Mary.position = PlayerStats.get_initial_position()
 
 func _on_Flag_body_entered(body: Node) -> void:
-	if body.name == "Mary":
-		
-		if PlayerStats.get_children() == 4:
+	if body.name == "Mary" and PlayerStats.get_children() == 4:
 			get_tree().change_scene("res://Scenes/MainMenu.tscn")
 			queue_free()
 
