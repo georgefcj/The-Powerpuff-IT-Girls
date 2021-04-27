@@ -7,9 +7,6 @@ var initial_position
 func increment_score():
 	self.score += 1 
 
-func decrement_score():
-	self.score -= 1 	
-
 func score_count():
 	return str(get_score()) + "/"+ str(10)
 	
