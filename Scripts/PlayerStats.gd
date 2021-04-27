@@ -30,3 +30,6 @@ func get_initial_position():
 
 func set_score(score):
 	self.score = score
+	
+func set_children(children):
+	self.children = children
