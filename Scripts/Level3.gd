@@ -5,17 +5,19 @@ func _ready() -> void:
 	PlayerStats.set_initial_position($Mary.position)
 	
 func _process(delta):
+	$Mary/ScoreStatus.text = PlayerStats.score_count_mary()
+	
 	if PlayerStats.get_score() == 1:
-		$Mary/Score.text = "Mary Lou Jepsen é executiva técnica e inventora nas áreas de display, imagem e hardware de computador."
+		$Mary/Score.text = "Mary Lou Jepsen é \n executiva técnica e inventora nas \n áreas de display, imagem e hardware de computador."
 		
 	if PlayerStats.get_score() == 2:
-		$Mary/Score.text = "Suas contribuições tiveram adoção mundial em displays, HDTV, laptops e projetores."
+		$Mary/Score.text = "Suas contribuições tiveram adoção \n mundial em displays, HDTV, \n laptops e projetores."
 		
 	if PlayerStats.get_score() == 3:
-		$Mary/Score.text = "Ela foi a força técnica por trás da geração de computação de baixo custo e tecnologias inovadoras de imagem médica e de consumo"
+		$Mary/Score.text = "Ela foi a força técnica por trás \n da geração de computação de \n baixo custo e tecnologias \n inovadoras de imagem médica e de consumo"
 		
 	if PlayerStats.get_score() == 4:
-		$Mary/Score.text = "Ela foi nomeada uma das cem pessoas mais influentes do mundo pela Time Magazine, foi nomeada em 2013 como um dos dez maiores pensadores da CNN em ciência e tecnologia por seu trabalho em inovação de display, e ela tem mais de 200 patentes publicadas ou emitidas."
+		$Mary/Score.text = "Ela foi nomeada uma das cem pessoas \n mais influentes do mundo pela \n Time Magazine, foi nomeada em 2013 como \n um dos dez maiores pensadores da \n CNN em ciência e tecnologia por seu \n trabalho em inovação de display, e ela tem mais de \n 200 patentes publicadas ou emitidas."
 		
 
 func _on_OutTheMap_body_entered(body: Node) -> void:
