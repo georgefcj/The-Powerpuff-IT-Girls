@@ -1,8 +1,9 @@
-[gd_resource type="TileSet" load_steps=4 format=2]
+[gd_resource type="TileSet" load_steps=5 format=2]
 
 [ext_resource path="res://assets/BGs/Level2/Grey.png" type="Texture" id=1]
 [ext_resource path="res://assets/BGs/Level1/Orange.png" type="Texture" id=2]
 [ext_resource path="res://assets/BGs/Menu/Pink.png" type="Texture" id=3]
+[ext_resource path="res://assets/BGs/Level3/Green.png" type="Texture" id=4]
 
 [resource]
 1/name = "Orange.png 1"
@@ -47,3 +48,17 @@
 3/shape_one_way_margin = 0.0
 3/shapes = [  ]
 3/z_index = 0
+4/name = "Green.png 4"
+4/texture = ExtResource( 4 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 0, 640, 384 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0

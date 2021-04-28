@@ -73,7 +73,7 @@ margin_bottom = 360.0
 [node name="Mitchell Baker" type="AnimatedSprite" parent="CenterContainer"]
 position = Vector2( 91.87, 238.651 )
 frames = SubResource( 1 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="CenterContainer/Mitchell Baker"]
@@ -84,6 +84,7 @@ script = ExtResource( 19 )
 [node name="Grace Hopper" type="AnimatedSprite" parent="CenterContainer"]
 position = Vector2( 281.297, 240.766 )
 frames = SubResource( 3 )
+frame = 1
 playing = true
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="CenterContainer/Grace Hopper"]
@@ -94,7 +95,7 @@ script = ExtResource( 20 )
 [node name="Mary Lou" type="AnimatedSprite" parent="CenterContainer"]
 position = Vector2( 494.293, 245.283 )
 frames = SubResource( 5 )
-frame = 2
+frame = 3
 playing = true
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="CenterContainer/Mary Lou"]

@@ -17,7 +17,7 @@
 [ext_resource path="res://Tilemaps/ground2.tres" type="TileSet" id=18]
 [ext_resource path="res://Fonts/upheavtt.ttf" type="DynamicFontData" id=19]
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=1]
 size = 30
 outline_size = 1
 outline_color = Color( 0.231373, 0.960784, 0.992157, 1 )
@@ -35,7 +35,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=6]
+[sub_resource type="CapsuleShape2D" id=4]
 radius = 56.2699
 
 [sub_resource type="CircleShape2D" id=5]
@@ -78,7 +78,7 @@ margin_left = -348.0
 margin_top = -200.0
 margin_right = -247.0
 margin_bottom = -145.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
@@ -96,7 +96,7 @@ margin_left = -254.0
 margin_top = -194.0
 margin_right = 497.0
 margin_bottom = 7.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
@@ -169,16 +169,7 @@ animation = "moving"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Flag"]
 position = Vector2( -72.1628, -6.23628 )
-shape = SubResource( 6 )
-
-[node name="Enemy2" parent="." instance=ExtResource( 7 )]
-position = Vector2( 711.149, 597.322 )
-z_index = 1
-
-[node name="AreaEnemy" type="Area2D" parent="Enemy2"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy2/AreaEnemy"]
-shape = SubResource( 5 )
+shape = SubResource( 4 )
 
 [node name="Enemy3" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1153.5, 668.009 )
@@ -187,24 +178,6 @@ z_index = 1
 [node name="AreaEnemy" type="Area2D" parent="Enemy3"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy3/AreaEnemy"]
-shape = SubResource( 5 )
-
-[node name="Enemy4" parent="." instance=ExtResource( 7 )]
-position = Vector2( 2112.12, 982.504 )
-z_index = 1
-
-[node name="AreaEnemy" type="Area2D" parent="Enemy4"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy4/AreaEnemy"]
-shape = SubResource( 5 )
-
-[node name="Enemy5" parent="." instance=ExtResource( 7 )]
-position = Vector2( 2766.34, 662.964 )
-z_index = 1
-
-[node name="AreaEnemy" type="Area2D" parent="Enemy5"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy5/AreaEnemy"]
 shape = SubResource( 5 )
 
 [node name="Enemy6" parent="." instance=ExtResource( 7 )]
@@ -225,17 +198,8 @@ z_index = 1
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy7/AreaEnemy"]
 shape = SubResource( 5 )
 
-[node name="Enemy8" parent="." instance=ExtResource( 7 )]
-position = Vector2( 3596.84, 542.32 )
-z_index = 1
-
-[node name="AreaEnemy" type="Area2D" parent="Enemy8"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy8/AreaEnemy"]
-shape = SubResource( 5 )
-
 [node name="Enemy9" parent="." instance=ExtResource( 7 )]
-position = Vector2( 3790.84, 162.32 )
+position = Vector2( 3731.51, 155.963 )
 z_index = 1
 
 [node name="AreaEnemy" type="Area2D" parent="Enemy9"]
@@ -268,15 +232,6 @@ z_index = 1
 [node name="AreaEnemy" type="Area2D" parent="Enemy12"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy12/AreaEnemy"]
-shape = SubResource( 5 )
-
-[node name="Enemy13" parent="." instance=ExtResource( 7 )]
-position = Vector2( 8605.81, 605.945 )
-z_index = 1
-
-[node name="AreaEnemy" type="Area2D" parent="Enemy13"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy13/AreaEnemy"]
 shape = SubResource( 5 )
 
 [node name="Enemy14" parent="." instance=ExtResource( 7 )]
@@ -320,17 +275,12 @@ normal = ExtResource( 8 )
 action = "JUMP"
 [connection signal="body_entered" from="OutTheMap" to="." method="_on_OutTheMap_body_entered"]
 [connection signal="body_entered" from="Flag" to="." method="_on_Flag_body_entered"]
-[connection signal="body_entered" from="Enemy2/AreaEnemy" to="." method="_on_AreaEnemy_body_entered"]
 [connection signal="body_entered" from="Enemy3/AreaEnemy" to="." method="_on_AreaEnemy_body_entered"]
-[connection signal="body_entered" from="Enemy4/AreaEnemy" to="." method="_on_AreaEnemy_body_entered"]
-[connection signal="body_entered" from="Enemy5/AreaEnemy" to="." method="_on_AreaEnemy_body_entered"]
 [connection signal="body_entered" from="Enemy6/AreaEnemy" to="." method="_on_AreaEnemy_body_entered"]
 [connection signal="body_entered" from="Enemy7/AreaEnemy" to="." method="_on_AreaEnemy_body_entered"]
-[connection signal="body_entered" from="Enemy8/AreaEnemy" to="." method="_on_AreaEnemy_body_entered"]
 [connection signal="body_entered" from="Enemy9/AreaEnemy" to="." method="_on_AreaEnemy_body_entered"]
 [connection signal="body_entered" from="Enemy10/AreaEnemy" to="." method="_on_AreaEnemy_body_entered"]
 [connection signal="body_entered" from="Enemy11/AreaEnemy" to="." method="_on_AreaEnemy_body_entered"]
 [connection signal="body_entered" from="Enemy12/AreaEnemy" to="." method="_on_AreaEnemy_body_entered"]
-[connection signal="body_entered" from="Enemy13/AreaEnemy" to="." method="_on_AreaEnemy_body_entered"]
 [connection signal="body_entered" from="Enemy14/AreaEnemy" to="." method="_on_AreaEnemy_body_entered"]
 [connection signal="body_entered" from="Enemy15/AreaEnemy" to="." method="_on_AreaEnemy_body_entered"]

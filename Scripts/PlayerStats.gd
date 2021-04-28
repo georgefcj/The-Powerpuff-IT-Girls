@@ -6,15 +6,18 @@ var initial_position
 
 func increment_score():
 	self.score += 1 
+	
+func decrement_score():
+	self.score -= 1 
 
 func score_count():
 	return str(get_score()) + "/"+ str(10)
 	
 func score_count_mary():
-	return str(get_score()) + "/"+ str(4)
+	return str(get_score()) + "/"+ str(get_children())
 
-func increment_children():
-	self.children += 1 
+func decrement_children():
+	self.children -= 1 
 
 func get_score():
 	return self.score
